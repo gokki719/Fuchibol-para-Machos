@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuchibol para Machos - Jerseys Ventas</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="apple-touch-icon" type="image/png" href="img/logo.PNG" />
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.PNG" />
+
+  
+ <!-- Estilos internos -->
+  <style>
+    /* Estilo global del body */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header: fondo oscuro con texto blanco, distribución flex */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Título dentro del header */
+    header h1 {
+      margin: 0;
+    }
+
+    /* Estilos para los enlaces del menú de navegación */
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--blanco); /* Se recomienda definir esta variable en estilos.css */
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    /* Efecto hover en el menú */
+    nav a:hover {
+      color: var(--dorado); /* Igual que arriba, asegúrate de definir esta variable */
+    }
+
+    /* Estilo principal */
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    /* Logo y título alineados en el header */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 55px;
+      width: auto;
+      border-radius: 5px;
+    }
+
+    /* Contenedor general para productos: diseño responsive con grid */
+    .contenedor-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Tarjeta individual del producto */
+    .producto {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      position: relative;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .producto:hover {
+      transform: scale(1.03); /* Efecto zoom al pasar el mouse */
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .producto h3 {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .precio-original {
+      text-decoration: line-through; /* Tachado para indicar descuento */
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    .precio-descuento {
+      color: green;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Etiqueta de 'Sale' sobre el producto */
+    .etiqueta {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    /* Footer: color oscuro y centrado */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #000;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    /* Imagen que cambia al pasar el mouse */
+    .imagen-hover {
+      position: relative;
+    }
+
+    .imagen-hover img {
+      width: 100%;
+      transition: opacity 0.3s ease-in-out;
+      display: block;
+    }
+
+    .hover-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .imagen-hover:hover .hover-img {
+      opacity: 1;
+    }
+
+    .imagen-hover:hover .default-img {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="logo-container">
+    <img src="img/logo.PNG" alt="Logo Fuchibol">
+    <h1>Fuchibol para Machos - JERSEYS</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="venta.html">Jerseys</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+  <main>
+  <!-- Sección 1: Jerseys 2024/25 -->
+  <h2>Jerseys 2024/25</h2>
+  <div class="contenedor-productos">
+
+    <div class="producto">
+      <img src="img/barcelona-away.jpg" alt="Barcelona Away 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>FC Barcelona 24/25 Away</h3>
+      <p class="precio-original">$1,019.46 MXN</p>
+      <p class="precio-descuento">$590.43 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/realmadrid-home.jpg" alt="Real Madrid Home 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>Real Madrid 24/25 Home</h3>
+      <p class="precio-original">$1,019.46 MXN</p>
+      <p class="precio-descuento">$590.43 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/barcelona-home.jpg" alt="Barcelona Home 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>FC Barcelona 24/25 Home</h3>
+      <p class="precio-original">$1,019.46 MXN</p>
+      <p class="precio-descuento">$590.43 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/realmadrid-away.jpg" alt="Real Madrid Third 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>Real Madrid 24/25 Third</h3>
+      <p class="precio-original">$1,019.46 MXN</p>
+      <p class="precio-descuento">$590.43 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/manunited-home.jpg" alt="Manchester United Home 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>Manchester United 24/25 Home</h3>
+      <p class="precio-original">$999.00 MXN</p>
+      <p class="precio-descuento">$580.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/cruzazul-home.jpg" alt="Cruz Azul Home 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>Cruz Azul 24/25 Home</h3>
+      <p class="precio-original">$950.00 MXN</p>
+      <p class="precio-descuento">$550.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/bayern-away.jpg" alt="Bayern Munich Away 24/25">
+      <span class="etiqueta">Sale</span>
+      <h3>Bayern Munich 24/25 Away</h3>
+      <p class="precio-original">$1,050.00 MXN</p>
+      <p class="precio-descuento">$600.00 MXN</p>
+    </div>
+
+  </div>
+
+  <!-- Sección 2: Jerseys de Selecciones -->
+  <h2 style="margin-top: 4rem;">Jerseys Selecciones</h2>
+  <div class="contenedor-productos">
+
+    <div class="producto">
+      <img src="img/argentina-copa24.jpg" alt="Argentina Copa América 2024">
+      <span class="etiqueta">Sale</span>
+      <h3>Argentina Copa América 2024</h3>
+      <p class="precio-original">$1,100.00 MXN</p>
+      <p class="precio-descuento">$650.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/portugal-euro24.jpg" alt="Portugal Euro 2024">
+      <span class="etiqueta">Sale</span>
+      <h3>Portugal Euro 2024</h3>
+      <p class="precio-original">$1,100.00 MXN</p>
+      <p class="precio-descuento">$640.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/alemania-euro24.jpg" alt="Alemania Euro 2024">
+      <span class="etiqueta">Sale</span>
+      <h3>Alemania Euro 2024</h3>
+      <p class="precio-original">$1,100.00 MXN</p>
+      <p class="precio-descuento">$640.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/japon-goku.jpg" alt="Japón x Goku Jersey">
+      <span class="etiqueta">Sale</span>
+      <h3>Japón x Goku Special Edition</h3>
+      <p class="precio-original">$1,200.00 MXN</p>
+      <p class="precio-descuento">$690.00 MXN</p>
+    </div>
+
+  </div>
+
+  <!-- Sección 3: Jerseys Retro -->
+  <h2 style="margin-top: 4rem;">Jerseys Retro</h2>
+  <div class="contenedor-productos">
+
+    <div class="producto">
+  <div class="imagen-hover">
+    <img src="img/francia-2006.jpg" alt="Francia 2006" class="default-img">
+    <img src="img/francia-2006-zidane.jpg" alt="Francia Zidane" class="hover-img">
+  </div>
+  <span class="etiqueta">Sale</span>
+  <h3>Francia Mundial 2006 (Zidane #10)</h3>
+  <p class="precio-original">$890.00 MXN</p>
+  <p class="precio-descuento">$520.00 MXN</p>
+</div>
+
+    <div class="producto">
+      <img src="img/inter-2010.jpg" alt="Inter de Milán 2010">
+      <span class="etiqueta">Sale</span>
+      <h3>Inter Milan Final Champions 2010</h3>
+      <p class="precio-original">$950.00 MXN</p>
+      <p class="precio-descuento">$560.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/jersey2.webp" alt="México 1998">
+      <span class="etiqueta">Sale</span>
+      <h3>México Selección 1998</h3>
+      <p class="precio-original">$880.00 MXN</p>
+      <p class="precio-descuento">$530.00 MXN</p>
+    </div>
+
+    <div class="producto">
+      <img src="img/boca-1997.jpg" alt="Boca Juniors Maradona 97/98">
+      <span class="etiqueta">Sale</span>
+      <h3>Boca Juniors 97/98 (Maradona)</h3>
+      <p class="precio-original">$940.00 MXN</p>
+      <p class="precio-descuento">$540.00 MXN</p>
+    </div>
+
+  </div>
+</main>
+
+
+  <footer>
+    © 2025 Fuchibol para Machos. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
